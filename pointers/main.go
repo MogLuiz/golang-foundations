@@ -17,5 +17,6 @@ func main() {
 	// Estou alterando o valor desse endereço de memoria. Dessa forma todas variaveis que apontar para o mesmo vão refletir essa alteração.
 	*pointer = 20
 
+	// Colocando o * eu pego o valor daquele endereço de memória. Sem o * eu pego o endereço de memória.
 	println(*pointer)
 }
