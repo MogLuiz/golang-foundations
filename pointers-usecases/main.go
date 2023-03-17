@@ -14,9 +14,10 @@ func soma1(a, b int) int {
 // endereço de memória daquela variável.
 // PARA ISSO UTILIZAMOS OS PONTEIROS.
 
-// Nessa função estou recebendo a cópia dos valores. E não o endereço da memoria do valor em sí
+// Nessa função estou recebendo a referência do endereço de memória dessas variáveis.
 func soma2(a, b *int) int {
-	// Dessa forma, atribuindo valor a variável "a" estou alterando apenas a cópia
+	// Dessa forma, atribuindo valor a variável "a" estou alterando de forma global.
+	// Pois estou alterando a referência de memória dessa variável. E isso reflete de forma global.
 	*a = 50
 	return *a + *b
 }
