@@ -1,5 +1,7 @@
 package main
 
+// Trabalhamos com ponteiros quando necessitamos gerar mutações nos valores recebidos por parâmetro em todo o projeto.
+
 type Account struct {
 	balance int
 }
