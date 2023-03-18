@@ -1,20 +1,23 @@
 package main
 
-import "fmt"
-
-type Customer struct {
-	name string
+type Account struct {
+	balance int
 }
 
-func (c Customer) walk() {
-	c.name = "Luiz Henrique"
-	fmt.Printf("O cliente %v andou\n", c.name)
+func (a *Account) simulate(value int) int {
+	a.balance += value
+	println(a.balance)
+	return a.balance
+}
+
+func NewAccount() *Account {
+	return &Account{balance: 0}
 }
 
 func main() {
-	Luiz := Customer{
-		name: "Luizin",
+	bank := Account{
+		balance: 100,
 	}
-	Luiz.walk()
-	fmt.Printf("O cliente %v\n", Luiz.name)
+	bank.simulate(200)
+	println(bank.balance)
 }
